@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vanilla Weather App</title>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
@@ -11,13 +11,44 @@
       integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="src/style.css">
+    <link rel="stylesheet" href="src/style.css" />
     <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
-</head>
-<body>
-    <div >
-
+  </head>
+  <body>
+    <div class="container">
+      <div class="weather-app">
+        <h1>Stockholm</h1>
+        <ul>
+          <li>Saturday 09:00</li>
+          <li>Rain</li>
+        </ul>
+        <div class="row">
+          <div class="col-6">
+            <img
+              src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAALEgAACxIB0t1+/AAAAdFJREFUeNrt2+1tgzAQBmBGYARGYAQWiNQRMkJGYARGYIRsUEbwX/5lBDa4niMrQpSqYN8d/jikV2oS9YwfwtmoagUAVcmpFEABFEABFGD7pucxz3ODGTAGA5sY91lTCR8iAG5ycDB9NgA4mfqPK/5f7O/USQMETP6DkDrAEDB5sduBBcA1PCDIwt0YuQAGIgBwtXqu1YMLwBACHIaKCQAuyunVgxzAdX9IBSFHgFO3Q263wDqNOAAO2hKvAOzfAhIAt+4/I5n4qZ1kMAAO1LkNC8QWdgA3eYg1rADua7+UDDDFPHlWANftIcHYi3anABgTBVjvFpsQgFfiAJ9HbV8AyCTmNEAke33K3EsHmEq+Bd4ptQkGAYylA7RFA6SyFT6YZ7YPQyzLYG6H2J/HFUABCgK4fc8tpsdM9mffk5OoQw6AA3QYWKX3PGmROhwAZjPg5HniInVIAbD4YzOYzehx0mJ1yACwcI1ZNoPZ1/XJkxatQwkw7mg/PK6aaB0SgJ1GY2MIGhZ7HSoAszNgR9Cw2OsEA6TY+MgAUm18lABJNj5KgCm0YV1dJxSgD21YV9cJBWjdQC/MV+DDyiV19B8mFEABFEABFEABFEABFOB3fgDsHp230RVQOwAAAABJRU5ErkJggg=="
+              alt="rain"
+            />
+            3°C | °F
+          </div>
+          <div class="col-6">
+            <ul>
+              <li>Precipitation: 90%</li>
+              <li>Humidity: 91%</li>
+              <li>Wind: 4km/h</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <small>
+        <a
+          href="https://github.com/MaryStef92/Vanilla-weather-app"
+          target="_blank"
+          >Open source code</a
+        >
+        by Mariia Stefaniuk
+      </small>
     </div>
+
     <script href="src/app.js"></script>
-</body>
+  </body>
 </html>
