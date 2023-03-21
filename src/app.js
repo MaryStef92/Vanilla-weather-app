@@ -22,23 +22,30 @@ function formatDate(timestamp) {
 }
 
 function displayTemperature(response) {
-  console.log(response.data);
   let temperatureElem = document.querySelector("#temperature");
-  temperatureElem.innerHTML = Math.round(response.data.main.temp);
   let cityElem = document.querySelector("#city");
+  let descriptionElem = document.querySelector("#description");
+  let humidityElem = document.querySelector("#humidity");
+  let windElem = document.querySelector("#wind");
+  let dateElem = document.querySelector("#date");
+  let iconElem = document.querySelector("#icon");
+
+  temperatureElem.innerHTML = Math.round(response.data.main.temp);
   cityElem.innerHTML = response.data.name;
-  document.querySelector("#description").innerHTML =
-    response.data.weather[0].main;
-  document.querySelector("#humidity").innerHTML = response.data.main.humidity;
-  document.querySelector("#wind").innerHTML = Math.round(
-    response.data.wind.speed
+  descriptionElem.innerHTML = response.data.weather[0].main;
+  humidityElem.innerHTML = response.data.main.humidity;
+  windElem.innerHTML = Math.round(response.data.wind.speed);
+  dateElem.innerHTML = formatDate(response.data.dt * 1000);
+  iconElem.setAttribute(
+    "src",
+    `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
-  document.querySelector("#date").innerHTML = formatDate(
-    response.data.dt * 1000
-  );
+
+  iconElem.setAttribute("alt", response.data.weather[0].main);
 }
 
 let apiKey = "b2d9fa1f2b35557e4615dd5fab218834";
-let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=Stockholm&appid=${apiKey}&units=metric`;
+let city = "Stockholm";
+let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
 
 axios.get(apiUrl).then(displayTemperature);
