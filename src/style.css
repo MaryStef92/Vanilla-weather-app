@@ -50,3 +50,20 @@ li {
   font-size: 64px;
   font-weight: 400;
 }
+
+.weather-temperature a {
+  text-decoration: none;
+}
+
+.weather-temperature a:hover {
+  text-decoration: underline;
+}
+
+.weather-temperature .active {
+  color: rgb(33, 33, 33);
+  cursor: default;
+}
+
+.weather-temperature .active:hover {
+  text-decoration: none;
+}
