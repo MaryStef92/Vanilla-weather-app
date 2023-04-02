@@ -113,33 +113,7 @@ function submitCity(event) {
   searchCity(cityInputElem);
 }
 
-function showFahrenheitTemp(event) {
-  event.preventDefault();
-  let temperatureElem = document.querySelector("#temperature");
-  celsiusLink.classList.remove("active");
-  fahrenheitLink.classList.add("active");
-  let fahrenheiTemp = (celsiusTemp * 9) / 5 + 32;
-  temperatureElem.innerHTML = Math.round(fahrenheiTemp);
-}
-
-function showCelsiusTemp(event) {
-  event.preventDefault();
-  let temperatureElem = document.querySelector("#temperature");
-  celsiusLink.classList.add("active");
-  fahrenheitLink.classList.remove("active");
-  temperatureElem.innerHTML = Math.round(celsiusTemp);
-}
-
-let celsiusTemp = null;
-
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", submitCity);
 
-let fahrenheitLink = document.querySelector("#fahrenheit-link");
-fahrenheitLink.addEventListener("click", showFahrenheitTemp);
-
-let celsiusLink = document.querySelector("#celsius-link");
-celsiusLink.addEventListener("click", showCelsiusTemp);
-
 searchCity("Stockholm");
-displayForecast();
